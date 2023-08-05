@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+.cursor {
+  background-color: white;
+  height: 200px;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotate 20s infinite;
+  z-index: -3;
+}
+
+.blur {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  backdrop-filter: blur(6vmax);
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-600 via-40% to-fuchsia-600 bg-clip-text text-transparent;
+}
