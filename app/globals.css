@@ -1,45 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-    scale: 1 1.5;
-  }
-  
-  to {
-    rotate: 360deg;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.cursor {
-  background-color: white;
-  height: 200px;
-  aspect-ratio: 1;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
-  animation: rotate 20s infinite;
-  z-index: -3;
+::-webkit-scrollbar {
+  display: none;
 }
-
-.blur {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -2;
-  backdrop-filter: blur(6vmax);
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .blue_gradient {
   @apply bg-gradient-to-r from-indigo-500 via-purple-600 via-40% to-fuchsia-600 bg-clip-text text-transparent;
+}
+
+.outlined-text {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #09090b;
+  -webkit-text-fill-color: transparent;
+}
+
+.underlined {
+  color: black;
+  flex: 1;
+  text-decoration: none;
+  background-position: 0 1.2em;
+  background-size: 0 10%;
+  background-repeat: no-repeat;
+  z-index: 20;
+  transition: 0.5s;
+}
+.underlined:hover {
+  background-size: 100% 10%;
+}
+.underlined--thin {
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 100%;
 }

@@ -1,0 +1,13 @@
+.cardContainer {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    .card {
+        width: 90vw;
+        height: 90vh;
+        margin-top: -20vh;
+    }
+}
